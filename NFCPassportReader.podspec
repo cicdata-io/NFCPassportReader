@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "Sources/**/*.{swift}"
 
-  spec.swift_version = "5.4"
+  spec.swift_version = "5.9"
 
   spec.dependency "OpenSSL-Universal", '3.3.3001'
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit' }
