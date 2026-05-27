@@ -1,10 +1,7 @@
 import XCTest
+import CoreNFC
 import OpenSSL
 import OSLog
-
-#if canImport(CoreNFC)
-import CoreNFC
-#endif
 
 @testable import NFCPassportReader
 
@@ -20,7 +17,6 @@ public func XCTAssertNoThrow<T>(_ expression: @autoclosure () throws -> T, _ mes
 }
 
 
-#if canImport(CoreNFC)
 final class NFCPassportReaderTests: XCTestCase {
     let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "tests")
     
@@ -263,4 +259,3 @@ final class NFCPassportReaderTests: XCTestCase {
         ("testSecureMessagingUnprotectWithData", testSecureMessagingUnprotectWithData),
     ]
 }
-#endif

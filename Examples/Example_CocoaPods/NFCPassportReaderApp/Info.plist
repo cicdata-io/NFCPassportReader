@@ -52,6 +52,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>nfc</string>
+		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
