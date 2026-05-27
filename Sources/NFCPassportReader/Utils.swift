@@ -371,9 +371,7 @@ public func calcSHA1Hash( _ data: [UInt8] ) -> [UInt8] {
 /// @return: A SHA224 hash of the data
 @available(iOS 13, macOS 10.15, *)
 public func calcSHA224Hash( _ data: [UInt8] ) -> [UInt8] {
-    
     var digest = [UInt8](repeating: 0, count:Int(CC_SHA224_DIGEST_LENGTH))
-    
     data.withUnsafeBytes {
         _ = CC_SHA224($0.baseAddress, CC_LONG(data.count), &digest)
     }
